@@ -28,7 +28,7 @@ model = BertNLIModel('output/bert-base.state_dict')
 sent_pairs = [('The lecturer committed plagiarism.','He was promoted.')]
 label, _= model(sent_pairs)
 print(label)
-```        
+```
 The output of the above example is:
 ```text
 ['contradiction']
@@ -52,6 +52,10 @@ During training/test, add argument *--hans 1*.
 git clone https://github.com/NVIDIA/apex
 cd apex
 pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+
+git clone https://www.github.com/nvidia/apex
+cd apex
+python3 setup.py install
 ```
 * All code is tested on a desktop with a single nVidia RTX 2080 card (8GB memory),
 running Python 3.7 on Ubuntu 18.04 LTS.
@@ -113,6 +117,8 @@ Accuracy: 0.8743
 ## License
 Apache License Version 2.0
 
-
+from transformers import *
+self.bert = BertModel.from_pretrained('bert-large-uncased')
+self.tokenizer = BertTokenizer.from_pretrained('bert-large-uncased')
 
 
