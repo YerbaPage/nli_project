@@ -118,7 +118,7 @@ Accuracy: 0.8743
 Apache License Version 2.0
 
 from transformers import *
-self.bert = BertModel.from_pretrained('bert-large-uncased')
-self.tokenizer = BertTokenizer.from_pretrained('bert-large-uncased')
+bert = BertModel.from_pretrained('bert-large-uncased')
+tokenizer = BertTokenizer.from_pretrained('bert-large-uncased')
 
-
+watch -n 1 -d nvidia-smi
