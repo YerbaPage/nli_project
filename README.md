@@ -122,3 +122,8 @@ bert = BertModel.from_pretrained('bert-large-uncased')
 tokenizer = BertTokenizer.from_pretrained('bert-large-uncased')
 
 watch -n 1 -d nvidia-smi
+
+/home/mist/nltk_data
+
+pip install --user --upgrade --pre torch torchvision -f https://download.pytorc
+h.org/whl/nightly/cu110/torch_nightly.html
